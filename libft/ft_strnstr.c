@@ -6,7 +6,7 @@
 /*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 15:52:15 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/28 08:21:13 by jurodrig         ###   ########.fr       */
+/*   Updated: 2024/02/01 21:25:17 by jurodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	if (len == 0)
 		return (NULL);
-	needle_len = strlen(needle);
-	haystack_len = strlen(haystack);
+	needle_len = ft_strlen(needle);
+	haystack_len = ft_strlen(haystack);
 	if (len > haystack_len)
 		len = haystack_len;
 	while (len >= needle_len)
 	{
-		if (strncmp(haystack, needle, needle_len) == 0)
+		if (ft_strncmp(haystack, needle, needle_len) == 0)
 			return ((char *)haystack);
 		haystack++;
 		len--;
