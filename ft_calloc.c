@@ -11,19 +11,49 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <string.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	total_size;
 	void	*ptr;
 
-	total_size = count * size;
+	total_size =  count * size;
 	if (count != 0 && total_size / count != size)
 	{
 		return (NULL);
 	}
 	ptr = malloc(total_size);
 	if (ptr != NULL)
-		ft_bzero(ptr, total_size);
+		bzero(ptr, total_size);
 	return (ptr);
 }
+/*
+int main() {
+    int num_elements =  5;
+    size_t size_of_element = sizeof(int);
+    int *array;
+
+    array = (int *)ft_calloc(num_elements, size_of_element);
+
+    if (array == NULL) {
+        printf("No se pudo asignar memoria.\n");
+        return  1;
+    }
+
+    for (int i =  0; i < num_elements; i++) {
+        array[i] = i +  1;
+    }
+
+    printf("Contenido del array:");
+    for (int i =  0; i < num_elements; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+
+    free(array);
+
+    return  0;
+}
+*/
