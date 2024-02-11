@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void*))
 {
@@ -22,3 +23,23 @@ void	ft_lstiter(t_list *lst, void (*f)(void*))
 		lst = lst->next;
 	}
 }
+/*
+void	duplicate_function(void *content)
+{
+	char *str = (char *)content;
+	char *duplicated = strdup(str);
+
+	printf("%s\n", duplicated);
+	free(duplicated);
+}
+int main ()
+{
+	t_list *lst = ft_lstnew("Separando");
+	ft_lstadd_back(&lst, ft_lstnew(", "));
+	ft_lstadd_back(&lst, ft_lstnew("cadenas"));
+
+	ft_lstiter(lst, duplicate_function);
+
+	return 0;
+}
+*/

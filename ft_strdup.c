@@ -24,3 +24,14 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(dup, s1, len);
 	return (dup);
 }
+/*
+int main()
+{
+	char source [] = "Michitos ronroneando";
+	char *target = strdup(source);
+
+	printf("%s\n", target);
+	free(target);
+	return 0;
+}
+*/

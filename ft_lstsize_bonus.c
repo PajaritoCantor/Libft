@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (lst)
@@ -24,3 +24,18 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+/*
+int main ()
+{
+	t_list *node1 = ft_lstnew("Pajaritos");
+	t_list *node2 = ft_lstnew("Cantores");
+
+	node1->next = node2;
+
+	int size_lst = ft_lstsize(node1);
+
+	printf("El tamaño de la lista es %d\n", size_lst);
+
+	return 0;
+}
+*/

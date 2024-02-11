@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 		str++;
 	if (*str == '-' || *str == '+')
 		sign = 44 - *str++;
-	while (isdigit(*str))
+	while (ft_isdigit(*str))
 	{
 		if ((sign == 1 && ((2147483647 / 10) < value))
 			|| (sign == -1 && ((-2147483648 / 10) > value)))

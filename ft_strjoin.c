@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -30,3 +29,30 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(result + len1, s2, len2 +1);
 	return (result);
 }
+
+/*
+int main ()
+{
+	char str1 [] = "Palomas ";
+	char str2 [] = "comiendo maíz";
+
+	if (str1 == NULL || str2 == NULL)
+	{
+		printf("Una o ambas cadenas son NULL. \n");
+		return 1;
+	}
+	char *result = ft_strjoin(str1, str2);
+
+	if (result == NULL)
+	{
+		printf("Error al unir las cadenas o fallo en la asignación de memoria.\n");
+	}
+	else
+	{
+		printf("Resultado de la unión: %s\n", result);
+		free (result);
+	}
+
+	return 0;
+}
+*/

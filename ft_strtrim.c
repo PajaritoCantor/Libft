@@ -31,3 +31,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result = ft_substr(s1, start, len);
 	return (result);
 }
+/*
+int main ()
+{
+	char const *s1 = "  hello bitches 42 ";
+	char const *set = " ";
+	
+	char *trimed = ft_strtrim(s1, set);
+
+	if (trimed)
+	{
+		printf("Cadena recortada: '%s'\n", trimed);
+		
+		free (trimed);
+	}
+	else
+	{
+		printf("No se pudo asignar memoria para la cadena recortada.\n");
+	}
+	return 0;
+}
+*/

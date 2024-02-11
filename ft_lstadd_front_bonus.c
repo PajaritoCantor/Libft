@@ -12,11 +12,40 @@
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!alst ||!new)
+	if (!lst ||!new)
 		return ;
-	if (*alst)
-		new->next = *alst;
-	*alst = new;
+	if (*lst)
+		new->next = *lst;
+	*lst = new;
 }
+/*
+int main ()
+{
+	t_list *lst = NULL;
+	
+	t_list *new_node = ft_lstnew("Hola");
+	ft_lstadd_front(&lst, new_node);
+
+	new_node = ft_lstnew("Hola");
+	ft_lstadd_front(&lst, new_node);
+
+	t_list *current = lst;
+	while (current != NULL)
+	{
+		printf("%s/n", (char *)current ->content);
+		current = current->next;
+	}
+	current = lst;
+	t_lst *tmp;
+	while (currnet != NULL)
+	{
+		tmp = current;
+		current = current->next;
+		free(tmp);
+	}
+
+	return 0;
+}
+*/

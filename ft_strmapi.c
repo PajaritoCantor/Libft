@@ -33,3 +33,26 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	result[i] = '\0';
 	return (result);
 }
+/*
+char	char_testfunction(unsigned int index, char c)
+{
+	if (c >= 'a' && c <= 'z')
+	{
+		return c - 'a' + 'A';
+	}
+	return c;
+}
+
+int main ()
+{
+	char str [] = "Gatitos tomando leche";
+	char *result = ft_strmapi(str, char_testfunction);
+	
+	if (result != NULL)
+	{
+		printf("%s\n", result);
+		free(result);
+	}
+	return 0;
+}
+*/

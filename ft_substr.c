@@ -31,3 +31,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr [len] = '\0';
 	return (substr);
 }
+/*
+int main ()
+{
+	const char *str = "Sepárame esta";
+	char *substr = ft_substr(str, 10, 5);
+
+	char *str_dest = ft_substr(NULL, 0, 20);
+
+	printf("subcadena'%s'\n", substr);
+
+	return 0 ;
+}
+*/

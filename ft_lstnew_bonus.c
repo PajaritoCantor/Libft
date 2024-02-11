@@ -23,3 +23,19 @@ t_list	*ft_lstnew(void *content)
 	head->next = NULL;
 	return (head);
 }
+
+/*
+int main ()
+{
+	t_list *new_list = ft_lstnew("Hello, World!");
+	t_list *empty_element = ft_lstnew(NULL);
+
+	printf("Contenido de la new_list: %s\n", (char *)new_list->content);
+	printf("contenido del empty_element: %s\n", (char *)empty_element->content);
+
+	free(new_list);
+	free(empty_element);
+
+	return 0;
+}
+*/

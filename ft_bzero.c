@@ -19,10 +19,20 @@ void	ft_bzero(void *s, size_t n)
 /*
 int	main()
 {
-	char str[] = "cursus42";
+	char str[1000] = "cursus42";
+	int len = ft_strlen(str);
 	printf("antes de bzero: %s\n", str);
-	ft_bzero(str, sizeof(str));
-	printf("Despuès de bzero: %s\n", str);
+	ft_bzero(str, 3);
+	int i = 0;
+	while (i < len)
+	{
+		if (str[i] == '\0')
+			write (1, "bzero funciona\n", 15);
+		else
+			write (1, &str[i], 1);
+		i++;
+	}
+	printf("despues de bzero: %s\n", &str[4]);
 	
 	return 0;
 }

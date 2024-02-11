@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-LIB = ar rcs
+LIB = ar -rcs
 RM = rm -f
 CC = gcc
 CCFLAGS = -Wall -Wextra -Werror
@@ -27,10 +27,6 @@ SRC	=	ft_isdigit.c ft_bzero.c ft_memset.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft
 BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c \
 		ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c  ft_lstmap_bonus.c
 
-INCLUDE = libft.h
-
-all: $(NAME) bonus
-
 OBJ =	$(SRC:.c=.o)
 
 $(NAME): $(OBJ) $(INCLUDE) 
@@ -41,16 +37,17 @@ BONUS_OBJS = $(BONUS:.c=.o)
 $(BONUS_OBJS): %.o: %.c
 	$(CC) $(CCFLAGS) -c $< -o $@
 
-bonus: $(OBJ) $(BONUS_OBJS)
-		$(LIB) $(NAME) $(OBJ) $(BONUS_OBJS)
+bonus: $(BONUS_OBJS)
+		$(LIB) $(NAME) $(BONUS_OBJS)
 
 .PHONY:	all	clean	fclean	re bonus
 
 clean:
-	$(RM)	$(OBJ) $(BONUS_OBJS)
+	$(RM) $(OBJ) $(BONUS_OBJS)
 
 fclean:	clean
 	$(RM) $(NAME)
 
-re:	fclean all
+all: $(NAME)
 
+re:	fclean all

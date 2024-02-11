@@ -30,3 +30,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (src_len);
 }
+/*
+int main ()
+{
+	char str = "Papitas fritas con ketchup";
+	char dst[30];
+	size t_ len;
+
+	len = ft_strlcpy(dst, src, sizeof(dst)); 
+}
+*/

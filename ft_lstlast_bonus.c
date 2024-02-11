@@ -22,3 +22,21 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+/*
+int main ()
+{
+	t_list *node1 = ft_lstnew("Pollitos");
+	t_list *node2 = ft_lstnew("observando");
+	t_list *node3 = ft_lstnew("a tu hermana");
+
+	node1->next = node2;
+	node2->next = node3;
+
+	t_list *last_node = ft_lstlast(node1);
+
+	if(last_node)
+	printf("El último nodo contiene: %s\n", last_node->content);
+
+	return 0;
+}
+*/

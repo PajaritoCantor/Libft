@@ -18,3 +18,27 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	write(fd, s, ft_strlen(s));
 }
+/*
+#include <fcntl.h>
+int main ()
+{
+	char str [25] = "Michitos ronroneando";
+	
+	int fd;
+
+	fd = open("borrar.txt", O_WRONLY);
+	if (fd == -1)
+	{
+		perror("Error opening file");
+		return 1;
+	}
+	ft_putstr_fd(str, fd);
+
+	if (close(fd) == -1)
+	{
+		perror("Error closing file");
+		return 1;
+	}
+	return (0);
+}
+*/
