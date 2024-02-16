@@ -13,7 +13,7 @@
 LIB = ar -rcs
 RM = rm -f
 CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror	
 NAME = libft.a 
 
 SRC	=	ft_isdigit.c ft_bzero.c ft_memset.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
