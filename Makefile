@@ -35,7 +35,7 @@ $(NAME): $(OBJ) $(INCLUDE)
 BONUS_OBJS = $(BONUS:.c=.o)
 
 $(BONUS_OBJS): %.o: %.c
-	$(CC) $(CCFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus: $(BONUS_OBJS)
 		$(LIB) $(NAME) $(BONUS_OBJS)

@@ -85,7 +85,7 @@ char	**ft_split(char const *s, char c)
 /*
 int main ()
 {
-	const char *test = "Gatitos, perritos, ponys.";
+	const char *test = " Gatitos, perritos, palomas";
 	char separator = ',';
 	
 	char **result = ft_split(test, separator);
@@ -93,7 +93,7 @@ int main ()
 	if (result == NULL)
 	{
 		printf("Fallo en asignación de memoria.\n");
-		return 1 ;
+		return (1);
 	}
 	int i = 0;
 	while (result[i] != NULL)
@@ -103,6 +103,6 @@ int main ()
 	}
 	free_strs(result);
 
-	return 0;
+	return (0);
 }
 */

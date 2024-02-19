@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
+# include <limits.h>
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);

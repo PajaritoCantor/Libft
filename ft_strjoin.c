@@ -45,7 +45,7 @@ int main ()
 
 	if (result == NULL)
 	{
-		printf("Error al unir las cadenas o fallo en la asignación de memoria.\n");
+		printf("Error.\n");
 	}
 	else
 	{

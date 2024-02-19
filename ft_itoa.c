@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <limits.h>
-#include <string.h>
 
 static int	ft_digit_count(int n)
 {
@@ -61,23 +58,17 @@ char	*ft_itoa(int n)
 	return (str);
 }
 /*
-int main() {
-    int numbers[] = {-123,  0,  123, INT_MAX, INT_MIN};
-    size_t num_length = sizeof(numbers) / sizeof(numbers[0]);
-
-    for (size_t i =  0; i < num_length; ++i) {
-        int num = numbers[i];
-        char *str = ft_itoa(num);
-        
-        if (str == NULL) {
-            printf("Error al convertir el número %d a cadena.\n", num);
-            continue;
-        }
-        
-        printf("El número %d convertido a cadena es: %s\n", num, str);
-        free(str); // Liberar la memoria asignada por ft_itoa
-    }
-
-    return  0;
+int main() 
+{
+    int n = -2147483648;
+	char *str = ft_itoa (n);
+	
+	if (str == NULL) 
+    printf("Error al convertir el número %d a cadena.\n",(n));
+	
+	printf("%s\n", str); 
+	free(str);
+	
+	return (0);
 }
 */
