@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	if (c == 0)
 		return ((char *)s + i);
-	while (i >= 0)
+	while (i >= 0) 
 	{
 		if (s[i] == (unsigned char)c)
 			return ((char *)&s[i]);
@@ -34,9 +34,6 @@ int main()
     int c = 'H';
 
     printf("%ld\n", ft_strrchr(s, c)-s);
-	printf("%ld\n", strrchr(s, c) -s);
-	printf("%s\n", ft_strrchr(s, c));
-	printf("%s\n", strrchr(s, c));
     return (0);
 }
 */

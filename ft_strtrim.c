@@ -32,23 +32,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (result);
 }
 /*
+#include <stdio.h>
 int main ()
 {
-	char const *s1 = "  hello bitches 42 ";
-	char const *set = " ";
+	char const *s1 = "k/ksk/  hello bitches 42 sjdk/kjdk/ ";
+	char const *set = "k/ ";
 	
-	char *trimed = ft_strtrim(s1, set);
+	char *trimmed = ft_strtrim(s1, set);
 
-	if (trimed)
+	if (trimmed == NULL)
 	{
-		printf("Cadena recortada: '%s'\n", trimed);
-		
-		free (trimed);
+		printf("NULL\n");
+		return (1);
 	}
-	else
-	{
-		printf("No se pudo asignar memoria para la cadena recortada.\n");
-	}
+	printf("Cadena recortada: '%s'\n", trimmed);
+	free (trimmed);
+	
 	return 0;
 }
 */

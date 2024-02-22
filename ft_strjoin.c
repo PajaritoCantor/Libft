@@ -29,20 +29,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(result + len1, s2, len2 +1);
 	return (result);
 }
-
 /*
+#include <stdio.h>
 int main ()
 {
 	char str1 [] = "Palomas ";
 	char str2 [] = "comiendo maíz";
-
-	if (str1 == NULL || str2 == NULL)
-	{
-		printf("Una o ambas cadenas son NULL. \n");
-		return 1;
-	}
-	char *result = ft_strjoin(str1, str2);
-
+	char *result = ft_strjoin(str1, str 2);
+			
 	if (result == NULL)
 	{
 		printf("Error.\n");

@@ -29,10 +29,10 @@ BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_
 
 OBJ =	$(SRC:.c=.o)
 
-$(NAME): $(OBJ) $(INCLUDE) 
-	$(LIB) $(NAME) $(OBJ) 
-
 BONUS_OBJS = $(BONUS:.c=.o)
+
+$(NAME): $(OBJ) 
+	$(LIB) $(NAME) $(OBJ) 
 
 $(BONUS_OBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

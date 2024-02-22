@@ -24,7 +24,7 @@ char	*ft_strchr(const char *s, int c)
 int main ()
 {
 	const char *s = "CURSUS42";
-	int c = 'R';
+	int c = 'U';
 	
 	printf("%ld\n", ft_strchr (s, c) - s);
 	printf("%s\n", ft_strchr (s, c));

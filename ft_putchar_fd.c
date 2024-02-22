@@ -16,14 +16,25 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
 }
+#include <stdio.h>
+#include <fcntl.h>
 /*
-int main() {
-    // Ejemplo de mensaje para imprimir
-    const char *mensaje = "¡Hola, Mundo!\n";
+int main() 
+{
+	int fd;
+	fd = open("example.txt", O_WRONLY | O_CREAT, 0644);
+	
+	if (fd == -1)
+	{
+	
+	return (1);
+
+	}
+		ft_putchar_fd('A', fd);
+	
+	close (fd);
+
+	return (0);
     
-    // Utilizamos printf para imprimir el mensaje
-    printf("%s", mensaje);
-    
-    return  0;
 }
 */

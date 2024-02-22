@@ -34,25 +34,21 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 /*
-char	char_testfunction(unsigned int index, char c)
+char test_function(unsigned int i, char c) 
 {
-	if (c >= 'a' && c <= 'z')
-	{
-		return c - 'a' + 'A';
-	}
-	return c;
+	i = 0;
+	while ( c >= 'a' && c <= 'z') 
+		c -= 32;
+		return (c);
 }
 
-int main ()
+#include <stdio.h>
+int main()
 {
-	char str [] = "Gatitos tomando leche";
-	char *result = ft_strmapi(str, char_testfunction);
-	
-	if (result != NULL)
-	{
-		printf("%s\n", result);
-		free(result);
-	}
+	const char *str = "holitas";
+	char *result = ft_strmapi(str, test_function);
+
+	printf("%s\n", result);
 	return 0;
 }
 */

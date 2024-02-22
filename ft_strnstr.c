@@ -40,9 +40,9 @@ int main ()
     char haystack [] = "Perritos y palomas haciendo popito";
     char needle[] = "haciendo";
 
-    char *haciendo = ft_strnstr(haystack, needle, sizeof(haystack));
+    char *result = ft_strnstr(haystack, needle, sizeof(haystack));
 
-    printf("haciendo: %s\n", haciendo);
+    printf("result: %s\n", result );
 
     return 0;
 }

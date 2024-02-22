@@ -29,11 +29,12 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd(n % 10 + '0', fd);
 }
 /*
+#include <stdio.h>
 int main(int argc, char *argv[]) 
 {
     // Verificar si se proporcionó un argumento
     if (argc <  2) {
-        printf("Uso: %s <numero>\n", argv[0]);
+        printf("Uso: %s10\n", argv[0]);
         return EXIT_FAILURE;
     }
 

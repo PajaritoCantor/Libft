@@ -30,18 +30,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 /*
+#include <stdio.h>
 int main()
 {
-    int source[] = {1,2,3,4,5,6,7,8,9,10};
-    int destination[10];
-
-	ft_memmove (destination, source, sizeof(int) * 10);
-	
-	int i = 0; 
-	while(i < 10)
-	{
-	printf("destination[%d]=%d\n", i, destination[i]);
-	i++;
-	}
+    char source[] = "tu mama";
+    char destination[20];
+		
+	printf("%s", ft_memmove (destination, source, sizeof(char) * 20));
 }
 */

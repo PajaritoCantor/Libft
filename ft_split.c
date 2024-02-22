@@ -82,6 +82,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
+#include <stdio.h>
 /*
 int main ()
 {
@@ -99,6 +100,8 @@ int main ()
 	while (result[i] != NULL)
 	{
 		printf("%s\n", result[i]);
+		free(result[i]);
+		result[i] = NULL;
 		i++;
 	}
 	free_strs(result);

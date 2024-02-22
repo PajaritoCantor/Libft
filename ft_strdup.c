@@ -25,13 +25,17 @@ char	*ft_strdup(const char *s1)
 	return (dup);
 }
 /*
+#include <stdio.h>
+#include <string.h>
 int main()
 {
 	char source [] = "Michitos ronroneando";
-	char *target = strdup(source);
+	char *dup = strdup(source);
 
-	printf("%s\n", target);
-	free(target);
+	printf("%s\n", dup);
+	free(dup);
+	free (source);
+
 	return 0;
 }
 */

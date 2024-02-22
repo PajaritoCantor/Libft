@@ -43,12 +43,14 @@ int main() {
         return  1;
     }
 
-    for (int i =  0; i < num_elements; i++) {
+    for (int i =  0; i < num_elements; i++) 
+	{
         array[i] = i +  1;
     }
 
     printf("Contenido del array:");
-    for (int i =  0; i < num_elements; i++) {
+    for (int i =  0; i < num_elements; i++) 
+	{
         printf("%d ", array[i]);
     }
     printf("\n");

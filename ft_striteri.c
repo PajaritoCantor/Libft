@@ -26,20 +26,18 @@ void	ft_striteri(char *s, void (*f)(unsigned	int, char *))
 	}
 }
 /*
-void testfunction(unsigned int index, char *str) 
+void test_function(unsigned int i, char *s) 
 {
-    if (*str >= 'A' && *str <= 'Z')
-	{
-		*str = testfunction((unsigned char)*str);
-	}
+	i = 0;
+	while (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= 32;
 }
+#include <stdio.h>
 int main ()
 {
-	char str [] = "PERRITOS Y GATITOS";
-	ft_striteri(str, testfunction);
-
-	printf("string modificado %s\n", str);
-
+	char str [] = "papitas";
+	ft_striteri(str, test_function);
+	printf("%s\n", str);
 	return (0);
 }
 */

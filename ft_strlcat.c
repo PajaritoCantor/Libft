@@ -31,13 +31,13 @@ size_t	ft_strlcat(char	*dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 /*
-int main ();
+int main ()
 {
-    char dest[20] = "Michis peluditos";
-    char src [] = "Ronroneando";
-
+    char src[] = " Ronroneando";
+	char dest[30] = "Michis peluditos";
+    
     ft_strlcat(dest, src, sizeof(dest));
-
+	printf("%s\n", dest);
     return 0; 
 }
 */

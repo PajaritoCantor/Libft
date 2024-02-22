@@ -34,12 +34,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int main ()
 {
-	const char *str = "Sepárame esta";
+	const char *str = "Sepárame esta cadena";
 	char *substr = ft_substr(str, 10, 5);
 
-	char *str_dest = ft_substr(NULL, 0, 20);
-
-	printf("subcadena'%s'\n", substr);
+	printf("subcadena:'%s'\n", substr);
+	free(substr);
+	printf("Memoria liberada\n");
 
 	return 0 ;
 }
