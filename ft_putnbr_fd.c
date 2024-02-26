@@ -30,21 +30,24 @@ void	ft_putnbr_fd(int n, int fd)
 }
 /*
 #include <stdio.h>
-int main(int argc, char *argv[]) 
+#include <fcntl.h>
+
+int main() 
 {
-    // Verificar si se proporcionó un argumento
-    if (argc <  2) {
-        printf("Uso: %s10\n", argv[0]);
-        return EXIT_FAILURE;
-    }
+	int fd;
+	fd = open("example.txt", O_WRONLY | O_CREAT, 0644);
+	
+	if (fd == -1)
+	{
+	
+	return (1);
 
-    // Convertir el argumento a entero
-    int numero = atoi(argv[1]);
+	}
+		ft_putnbr_fd(34, fd);
+	
+	close (fd);
 
-    // Imprimir el número usando ft_putnbr_fd
-    ft_putnbr_fd(numero, STDOUT_FILENO);
-    printf("\n"); // Agregar una nueva línea después de imprimir el número
-
-    return EXIT_SUCCESS;
+	return (0);
+    
 }
 */

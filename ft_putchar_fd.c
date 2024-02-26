@@ -15,10 +15,11 @@
 void	ft_putchar_fd(char c, int fd)
 {
 	write (fd, &c, 1);
+	return ;
 }
+/*
 #include <stdio.h>
 #include <fcntl.h>
-/*
 int main() 
 {
 	int fd;
@@ -30,7 +31,7 @@ int main()
 	return (1);
 
 	}
-		ft_putchar_fd('A', fd);
+		ft_putchar_fd('1', fd);
 	
 	close (fd);
 

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	wordlen(char const *s, char c)
 {
@@ -82,8 +83,9 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-#include <stdio.h>
 /*
+#include <stdio.h>
+printf("%zu\n",sizeof(char *)); //gestionar memoria
 int main ()
 {
 	const char *test = " Gatitos, perritos, palomas";

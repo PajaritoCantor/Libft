@@ -26,6 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*
+#include <stdio.h>
 int main(void)
 {
 	char data[] = {'c', 'u', 'r', 's', 'u', 's'};
@@ -40,12 +41,12 @@ int main(void)
 	printf("pos[0] = %c\n", pos[0]);
 	printf("pos[1] = %c\n", pos[1]);
 	} 
+	
 	char str[] = "johnwick@gmail.com";
-
-	char *domain = ft_memchr(str, '@', strlen(str));
+	char *domain = ft_memchr(str, '@', ft_strlen(str));
 	domain++;
 
-	printf: ("domain = %s\n", domain);
+	printf("domain = %s\n", domain);
 	
 	return (0);
 }

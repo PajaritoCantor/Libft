@@ -31,13 +31,16 @@ size_t	ft_strlcat(char	*dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 /*
+#include <string.h>
+#include <stdio.h>
 int main ()
 {
     char src[] = " Ronroneando";
 	char dest[30] = "Michis peluditos";
+	size_t len;
     
-    ft_strlcat(dest, src, sizeof(dest));
-	printf("%s\n", dest);
+	len = ft_strlcat(dest, src, sizeof(dest) - 1);
+	printf("%zu\n", len);
     return 0; 
 }
 */

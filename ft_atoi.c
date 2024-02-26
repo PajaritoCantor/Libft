@@ -38,3 +38,16 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * value);
 }
+
+/*
+int main ()
+{
+	const char *str1 = "92233 7203";
+	printf ("%.4s\n", str1);
+
+	printf("%d\n", ft_atoi(str1));
+	printf("%d\n", atoi(str1));
+	
+	return (0);
+}
+*/

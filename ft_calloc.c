@@ -29,34 +29,25 @@ void	*ft_calloc(size_t count, size_t size)
 		ft_bzero(ptr, total_size);
 	return (ptr);
 }
-
 /*
-int main() {
-    int num_elements =  5;
-    size_t size_of_element = sizeof(int);
-    int *array;
+#include <stdio.h>
+int main() 
+{
 
-    array = (int *)ft_calloc(num_elements, size_of_element);
-
-    if (array == NULL) {
-        printf("No se pudo asignar memoria.\n");
-        return  1;
-    }
-
-    for (int i =  0; i < num_elements; i++) 
+    size_t len = 10;
+    char *result = ft_calloc(len, sizeof(char));
+	
+	size_t count = 0;
+	while (count < len)
 	{
-        array[i] = i +  1;
-    }
-
-    printf("Contenido del array:");
-    for (int i =  0; i < num_elements; i++) 
-	{
-        printf("%d ", array[i]);
-    }
-    printf("\n");
-
-    free(array);
-
-    return  0;
+		if (result[count] != 0)
+		{
+			printf("error");
+			return 0;
+		}
+		count++;
+	}
+	printf("right\n");
+	return 0;
 }
 */

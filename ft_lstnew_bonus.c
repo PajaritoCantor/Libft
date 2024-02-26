@@ -23,15 +23,18 @@ t_list	*ft_lstnew(void *content)
 	head->next = NULL;
 	return (head);
 }
-
 /*
+#include <stdio.h>
 int main ()
 {
 	t_list *new_list = ft_lstnew("Hello, World!");
 	t_list *empty_element = ft_lstnew(NULL);
 
 	printf("Contenido de la new_list: %s\n", (char *)new_list->content);
-	printf("contenido del empty_element: %s\n", (char *)empty_element->content);
+	if (empty_element->content)
+		printf("empty_content: %s\n", (char *)empty_element->content);
+	else
+		printf("empty_element está vacío.\n");
 
 	free(new_list);
 	free(empty_element);

@@ -28,6 +28,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 }
 /*
+#include <stdio.h>
 int main ()
 {
 	t_list *node1 = ft_lstnew("Node 1");

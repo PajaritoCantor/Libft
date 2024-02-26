@@ -20,13 +20,14 @@ void	ft_putstr_fd(char *s, int fd)
 }
 /*
 #include <fcntl.h>
+#include <stdio.h>
 int main ()
 {
-	char str [25] = "Michitos ronroneando";
+	char *str = "Michitos ronroneando";
 	
 	int fd;
 
-	fd = open("borrar.txt", O_WRONLY);
+	fd = open("borrar.txt", O_WRONLY | O_CREAT, 0644);
 	if (fd == -1)
 	{
 		perror("Error opening file");

@@ -21,29 +21,29 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 /*
+#include <stdio.h>
 int main ()
 {
 	t_list *lst = NULL;
 	
-	t_list *new_node = ft_lstnew("Hola");
+	t_list *new_node = ft_lstnew("Hola1");
 	ft_lstadd_front(&lst, new_node);
 
-	new_node = ft_lstnew("Hola");
+	new_node = ft_lstnew("Hola2");
 	ft_lstadd_front(&lst, new_node);
 
 	t_list *current = lst;
 	while (current != NULL)
 	{
-		printf("%s/n", (char *)current ->content);
+		printf("%s\n", (char *)current ->content);
 		current = current->next;
 	}
 	current = lst;
-	t_lst *tmp;
-	while (currnet != NULL)
+	t_list *tmp;
+	while (current != NULL)
 	{
 		tmp = current;
 		current = current->next;
-		free(tmp);
 	}
 
 	return 0;

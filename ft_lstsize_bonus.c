@@ -25,6 +25,7 @@ int	ft_lstsize(t_list *lst)
 	return (i);
 }
 /*
+#include <stdio.h>
 int main ()
 {
 	t_list *node1 = ft_lstnew("Pajaritos");

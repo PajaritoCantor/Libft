@@ -20,16 +20,27 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 /*
-int main() {
-    // Mensaje para imprimir
-    char *mensaje = "¡Hola, Mundo!";
-    
-    // Descriptor de archivo para stdout
-    int fd =   1;
-    
-    // Llamada a la función ft_putendl_fd para imprimir el mensaje
-    ft_putendl_fd(mensaje, fd);
-    
-    return   0;
+#include <fcntl.h>
+#include <stdio.h>
+int main ()
+{
+	char *str = "Michitos ronroneando";
+	
+	int fd;
+
+	fd = open("borrar.txt", O_WRONLY | O_CREAT, 0644);
+	if (fd == -1)
+	{
+		perror("Error opening file");
+		return 1;
+	}
+	ft_putendl_fd(str, fd);
+
+	if (close(fd) == -1)
+	{
+		perror("Error closing file");
+		return 1;
+	}
+	return (0);
 }
 */

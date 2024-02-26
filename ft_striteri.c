@@ -29,7 +29,7 @@ void	ft_striteri(char *s, void (*f)(unsigned	int, char *))
 void test_function(unsigned int i, char *s) 
 {
 	i = 0;
-	while (s[0] >= 'a' && s[0] <= 'z')
+	while (*s >= 'a' && *s <= 'z')
 		s[0] -= 32;
 }
 #include <stdio.h>

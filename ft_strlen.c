@@ -21,9 +21,11 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*#include <stdio.h>
-int main(void)
+/*
+#include <string.h>
+#include <stdio.h>
+int main()
 {
-	printf("%zu", ft_strlen("Paco hijoputa y puta barsa"));
-}*/
+	printf("%zu\n", ft_strlen("Paco hijoputa y amo barsa"));
+}
+*/

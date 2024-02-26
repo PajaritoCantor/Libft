@@ -35,7 +35,7 @@ int main ()
 {
 	char str1 [] = "Palomas ";
 	char str2 [] = "comiendo maíz";
-	char *result = ft_strjoin(str1, str 2);
+	char *result = ft_strjoin(str1, str2);
 			
 	if (result == NULL)
 	{

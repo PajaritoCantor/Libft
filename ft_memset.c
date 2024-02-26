@@ -22,12 +22,21 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 /*
+#include <stdio.h>
 int	main(void)
 {
-	int arr [5] = {1, 2, 3, 4, 5};
+	int arr [5];
 
-	printf("%d %d %d %d %d\n", arr[0], arr[1], arr[2], arr[3], arr[4]);
+	ft_memset(arr, 0 , sizeof(arr));
+	
+	int i = 0;
 
+	while (i < 5)
+	{
+		printf("[%d]=%d\n", i, arr[i]);
+		i++;
+	}
+	
 	return (0);
 }
 */

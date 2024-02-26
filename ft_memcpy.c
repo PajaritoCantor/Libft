@@ -26,20 +26,28 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 /*
+#include <stdio.h>
 int main()
 {	
-	char s[] = "abcdefghijklmnopqrstuvwxyz";
-	char d[27];
+	char src[] = "a,bcdefghijklmnopqrstuvwxyz";
+	char dst[27];
 
-	ft_memcpy(d, s, sizeof(char) * 27);
-	printf("d: %s\n", d);
+	ft_memcpy(dst, src, sizeof(char) * 27);
+	printf("dst1: %s\n", dst);
 
-	char e [10];
+	char dst2 [10];
 	
-	ft_memcpy(e, s+8, sizeof(char) * 9);
-	e  [9] = '\0';
+	ft_memcpy(dst2, src+8, sizeof(char) * 9);
+	dst2  [9] = '\0';
 
-	printf("e: %s\n", e);
+	printf("dst2: %s\n", dst2);
+
+	char src1[] = "a,bcdefghijklmnopqrstuvwxyz";
+//superposicion
+	ft_memcpy(src1+5, src1, sizeof(char) * 10);
+	src1[15] = '\0';
+
+	printf("src1: %s\n", src1);
 
 	return 0;
 }

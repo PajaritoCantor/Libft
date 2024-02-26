@@ -23,6 +23,7 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 /*
+#include <stdio.h>
 int main ()
 {
 	t_list *node1 = ft_lstnew("Pollitos");
