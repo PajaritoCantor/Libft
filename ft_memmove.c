@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len) 
 {
 	unsigned char	*d;
 	unsigned char	*s;
@@ -58,7 +58,7 @@ int main()
 */
 
 - La función memmove se utiliza para copiar n bytes de src a dst. 
-	* Si src y dst se superponen, la función memmove garantiza que los datos originales en src se copien correctamente a dst.
+	* Si __src__ y **dst** se superponen, la función memmove garantiza que los datos originales en src se copien correctamente a dst.
 - void *dst, const void *src, size_t len: Son los parámetros de la función
 	* dst es el puntero al destino donde quieres copiar los datos
 	* src es el puntero a la fuente de donde quieres copiar los datoss
