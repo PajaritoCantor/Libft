@@ -52,7 +52,10 @@ int main ()
 }
 */
 
-while (ft_isdigit(*str)) se ejecuta mientras el carácter actual en la cadena str se un dígito (0-9).
-Dentro del bucle, hay una condición que verifica si el valor actual excede los límites de un entero largo (long long int). Si el valor es demasiado grande o demasiado pequeño, se devuelve el valor actual multiplicado por el signo.
-value = value * 10 + (*str++ - '0'): Esta línea de código es la que realmente convierte la cadena de caracteres en un número. Multiplica el valor actual por 10 y luego suma el valor numérico del carácter actual. El carácter se convierte en un número restando el valor del carácter ‘0’. Luego, se incrementa el puntero str para pasar al siguiente carácter.
-Finalmente, si todos los dígitos se han procesado sin exceder los límites, se devuelve el valor final multiplicado por el signo.
+La función ft_atoi convierte una cadena de caracteres que representa un número entero en su equivalente numérico:
+
+- El bucle while al inicio de la función ignora cualquier espacio en blanco o carácter de control al inicio de la cadena.
+- Si el primer carácter no es un espacio en blanco es un signo de más (+) o de menos (-), se establece el valor de sign en consecuencia y se incrementa el puntero de la cadena.
+- El siguiente bucle while recorre la cadena, convirtiendo cada dígito en un número y agregándolo al valor total. Esto se hace multiplicando el valor total actual por 10 y sumando el valor del dígito actual.
+- Antes de agregar el dígito actual al valor total, se verifica si la próxima operación causará un desbordamiento. Si es así, se devuelve el valor actual.
+- Se devuelve el valor total multiplicado por el signo para obtener el número entero correspondiente a la cadena de entrada.
