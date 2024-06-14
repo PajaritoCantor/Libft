@@ -30,3 +30,9 @@ int	main()
     printf("Después de bzero: %s\n", str);
 }
 */
+Esta función se utiliza para poner en cero un bloque de memoria.
+Toma dos parámetros:
+- void *s: puntero que apunta a la memoria que se desea poner a cero
+- size_t n: el número de bytes que se desea poner a cero
+Dentro de la función, se llama a ft_memset para llenar los primeros n bytes de la memoria apuntada por s con el valor 0
+La función retorna sin devolver ningún valor.
