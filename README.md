@@ -30,3 +30,7 @@ Buscando "tos" en "Ppapapapapapapaptospapapapapapa" con `len = 25`
 | 2         | `papapapapapapaptospapapapapapa` | ❌ No coincide       | Continúa  |
 | ...       | ...                            | ...                   | ...       |
 | 17        | `tospapapapapapa`              | ✅ Coincide           | Retorna puntero |
+
+| **Función** | **Descripción y Funcionamiento** |
+|-------------|-----------------------------------|
+| [ft_strlcpy](https://github.com/PajaritoCantor/Libft/blob/main/ft_strlcpy.c) | **Descripción**: La función `ft_strlcpy` copia una cadena de caracteres desde `src` hasta `dst`, asegurándose de que la cadena de destino siempre termine en `'\0'` (carácter nulo), incluso si `dstsize` es menor que la longitud de `src`. A diferencia de `strcpy`, esta función protege contra desbordamientos de buffer al recibir el tamaño máximo permitido en `dstsize`. Si `dstsize` es 0, la función no copia nada y simplemente devuelve la longitud de `src`. El valor de retorno es la longitud total de `src`, lo que permite saber si hubo truncamiento. <br><br> **Funcionamiento**: <br> 1. Obtener la longitud de `src` usando `ft_strlen`. <br> 2. Si `dstsize` es mayor a 0, copiar hasta `dstsize - 1` caracteres de `src` a `dst`, dejando siempre espacio para el carácter `'\0'`. <br> 3. Asegurar la terminación de `dst` agregando `'\0'` en la última posición disponible. <br> 4. Retornar la longitud de `src`, permitiendo al usuario saber si la copia fue completa o truncada. |
