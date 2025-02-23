@@ -96,7 +96,6 @@ Esta función es útil cuando se necesita buscar una subcadena dentro de otra si
 |-------------|-----------------------------------|
 | [ft_strlcpy](https://github.com/PajaritoCantor/Libft/blob/main/ft_strlcpy.c) | **Descripción**: <br> La función `ft_strlcpy` copia una cadena de caracteres desde `src` hasta `dst`, asegurándose de que la cadena de destino siempre termine en `'\0'` (carácter nulo), incluso si `dstsize` es menor que la longitud de `src`. <br> A diferencia de `strcpy`, esta función protege contra desbordamientos de buffer al recibir el tamaño máximo permitido en `dstsize`. <br>  Si `dstsize` es 0, la función no copia nada y simplemente devuelve la longitud de `src`. <br> El valor de retorno es la longitud total de `src`, lo que permite saber si hubo truncamiento. <br> <br>**Funcionamiento**: <br> 1. Obtener la longitud de `src`. <br> 2. Si la longitud del destino es mayor a 0, copiar hasta antes del caracter nulo los caracteres de `src` a `dst`, dejando siempre espacio para el carácter `'\0'`. <br> 3. Asegurar la terminación de `dst` agregando `'\0'` en la última posición disponible. <br> 4. Retornar la longitud de `src`, permitiendo al usuario saber si la copia fue completa o truncada. |
 
-
-
-
-
+| **Función** | **Descripción y Funcionamiento** |
+|-------------|-----------------------------------|
+|ft_memmove | **Descripción**: La función `memmove()` copia `n bytes` del área de memoria `src` al área de memoria `dest`. Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes en `src` se copiaran primero en una matriz temporal que no se solapara con `src` o `dest`, y luego los bytes se copian de la matriz temporal a `dest`. La función `memmove()` devuelve un puntero a `dest`.
