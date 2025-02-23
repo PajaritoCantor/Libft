@@ -1,66 +1,90 @@
-## Debuggeo básico con lldb
+# 👨‍💻 LIBFT 
 
-* **1 Iniciar el lldb con el ejecutable**
+#### Os comparto mi librería en C modificada y optimizada.<br><br>He dedicado tiempo a escribiros apuntes sobre cada función para que podais abordarlas vosotros mismos.<br><br>Son anotaciones desde la experiencia de alguien que suele hacer muchos cuestionamientos a cada línea de código y al por qué de las cosas. 
 
-      lldb ./a.out
-* **2 Establecer un punto de interrupción en una función**
+#### PD: Os comparto al inicio un manual básico de cómo debuggear vuestras funciones y de este modo explorar el funcionamiento de cada una.
 
-      (lldb) b main
-  - **Si quieres establecer un punto de interrupción en una línea específica:**
+### 🟢 Debuggeo básico con LLDB
 
-         (lldb) b tu_programa.c:10 
-  - **si quieres ver todos los puntos de interrupción:**
+<details>
+<summary>Ver Comandos</summary>
+
+* **1. Iniciar el lldb con el ejecutable**
+
+        lldb ./a.out
+
+* **2. Establecer un punto de interrupción en una función**
   
-        (lldb) breakpoint list
+            (lldb) b main
+  
+  - **Si quieres establecer un punto de interrupción en una línea específica:**
+  
+            (lldb) b tu_programa.c:10
+      
+  - **Si quieres ver todos los puntos de interrupción:**
+      
+            (lldb) breakpoint list
+  
   - **Si quieres eliminar un punto de interrupción:**
 
-        (lldb) breakpoint delete 1  (1 es el número del punto de interrupción).
+            (lldb) breakpoint delete 1  # 1 es el número del punto de interrupción
+      
 
-* **3 Ejecuta el programa:**
+* **3. Ejecuta el programa:**
   - Ejecuta el programa hasta que se encuentre un punto de interrupción.
+  
+            (lldb) r
+      
 
-        (lldb) r
-
-* **4 Avanzar línea por línea**
+* **4. Avanzar línea por línea**
   - Avanzar sin entrar en funciones:
-  
-        (lldb) n
+      
+            (lldb) n
+      
   - Entrar en una función:
-  
-        (lldb) s
+     
+            (lldb) s
+      
 
 * **5. Si quieres inspeccionar variables**
-- Si quieres imprimir el valor de una variable:
+  - Si quieres imprimir el valor de una variable:
+      
+            (lldb) p variable
+     
+  - Si quieres ver todas las variables locales:
+      
+            (lldb) fr v
+      
+  - Si quieres ver el contenido de un arreglo o puntero:
+      
+            (lldb) memory read puntero
+      
 
-      (lldb) p variable
-- Si quieres ver todas las variables locales:
-
-      (lldb) fr v
-- Si quieres ver el contenido de un arreglo o puntero:
-
-      (lldb) memory read puntero
 * **6. Continuar la ejecución**
-- Continúa la ejecución hasta el siguiente punto de interrupción.
-
-      (lldb) c
+  - Continúa la ejecución hasta el siguiente punto de interrupción.
+      
+            (lldb) c
+      
 
 * **10. Salir de LLDB**
-- Cuando termines de depurar, sal de LLDB.
+  - Cuando termines de depurar, sal de LLDB.
+      
+            (lldb) q
 
-      (lldb) q
 
 * **Comandos Útiles Adicionales**
-- **Ver el tamaño de una variable:**
-
-      (lldb) p sizeof(variable)
-
-- Ver el contenido de un arreglo como una cadena:
-
-      (lldb) p (char *)arreglo
-
-- Ver el contenido de la pila de llamadas:
-
-      (lldb) bt
+  - **Ver el tamaño de una variable:**
+      
+            (lldb) p sizeof(variable)
+      
+  - **Ver el contenido de un arreglo como una cadena:**
+      
+            (lldb) p (char *)arreglo
+      
+  - **Ver el contenido de la pila de llamadas:**
+     
+            (lldb) bt
+</details>
 
 | ft_memchr |
 |--------|
@@ -98,4 +122,4 @@ Esta función es útil cuando se necesita buscar una subcadena dentro de otra si
 
 | **Función** | **Descripción y Funcionamiento** |
 |-------------|-----------------------------------|
-|ft_memmove | **Descripción**: La función `memmove()` copia `n bytes` del área de memoria `src` al área de memoria `dest`. Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes en `src` se copiaran primero en una matriz temporal que no se solapara con `src` o `dest`, y luego los bytes se copian de la matriz temporal a `dest`. La función `memmove()` devuelve un puntero a `dest`.
+|ft_memmove | **Descripción**: La función `memmove()` copia `n bytes` del área de memoria `src` al área de memoria `dest`. <br>Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes en `src` se copiaran primero en una matriz temporal que no se solapara con `src` o `dest`, y luego los bytes se copian de la matriz temporal a `dest`. <br>La función `memmove()` devuelve un puntero a `dest`.<br><br>**Funcionamiento:** <br>1. **Verificación de entradas:** Asegurarse de que las áreas de memoria de origen y destino sean válidas antes de realizar cualquier operación.<br>2. **Preparación para la copia** Convertir las áreas de memoria a un formato que permita la manipulación byte a byte.<br>3. **Detección de solapamiento** Determinar si las áreas de memoria de origen y destino se superponen. Esto es crucial para decidir la dirección en la que se realizará la copia.<br>4. **copia segura**: **Si hay solapamiento:** Realizar la copia desde el final hasta el inicio para evitar sobreescribir datos que aún no se han copiado.<br>**Si no hay solapamiento:** realizar la copia desde el inicio hacia el final, ya que no hay riesgo de sobreescribir datos. <br>5. **Retorno del resultado:** Devuelve un puntero al área de memoria de destino, permitiendo un uso en expresiones más complejas.     
