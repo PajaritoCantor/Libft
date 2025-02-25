@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/14 00:38:08 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/22 20:58:29 by jurodrig         ###   ########.fr       */
+/*   Created: 2025/02/14 21:59:48 by juan              #+#    #+#             */
+/*   Updated: 2025/02/25 14:43:33 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*ptr;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
 	while (n--)
@@ -26,28 +26,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*
-#include <stdio.h>
-int main(void)
+int	main(void)
 {
-	char data[] = {'c', 'u', 'r', 's', 'u', 's'};
+	char	*result;
 
-	char *pos = ft_memchr(data, 'r', 6);
-	if (pos == NULL)
-	{
-	printf("character not found!\n");
-	}
-	else
-	{
-	printf("pos[0] = %c\n", pos[0]);
-	printf("pos[1] = %c\n", pos[1]);
-	} 
-	
-	char str[] = "johnwick@gmail.com";
-	char *domain = ft_memchr(str, '@', ft_strlen(str));
-	domain++;
-
-	printf("domain = %s\n", domain);
-	
+	char s[] ={"perritos"};
+	result = ft_memchr(s, 'e', ft_strlen(s));
+	printf("%s\n", result);
 	return (0);
 }
 */

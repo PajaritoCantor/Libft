@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 03:26:02 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/27 21:11:33 by jurodrig         ###   ########.fr       */
+/*   Created: 2025/02/14 10:17:28 by juan              #+#    #+#             */
+/*   Updated: 2025/02/25 14:43:01 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,24 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
-	if (c == 0)
-		return ((char *)s + i);
+	if (!c)
+		return ((char *)s + 1);
 	while (i >= 0)
 	{
-		if (s[i] == (unsigned char)c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;
 	}
 	return (0);
 }
 /*
-int main()
+int	main(void)
 {
-    const char *s = "HALHITA";
-    int c = 'H';
+	const char	*s = "Hola Mundo";
+	char		c;
 
-    printf("%ld\n", ft_strrchr(s, c)-s);
-    return (0);
+	c = 'n';
+	printf("Carácter: '%c' encontrado en %ld\n", c, ft_strrchr(s, c) - s);
+	return (0);
 }
 */

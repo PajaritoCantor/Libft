@@ -3,40 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 22:17:48 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/22 20:48:51 by jurodrig         ###   ########.fr       */
+/*   Created: 2025/02/14 17:17:36 by juan              #+#    #+#             */
+/*   Updated: 2025/02/25 14:43:20 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
 
-	ptr = (unsigned char *)b;
-	while (len--)
+	ptr = (unsigned char *)s;
+	while (n--)
 		*ptr++ = (unsigned char)c;
-	return (b);
+	return (s);
 }
 /*
-#include <stdio.h>
-int	main(void)
+int main ()
 {
-	int arr [5];
-
-	ft_memset(arr, 0 , sizeof(arr));
-	
-	int i = 0;
-
-	while (i < 5)
-	{
-		printf("[%d]=%d\n", i, arr[i]);
-		i++;
-	}
-	
+	char str [50];
+	ft_memset(str, 'a', 57);
+	printf("Resultado: %s\n", str);
 	return (0);
 }
 */

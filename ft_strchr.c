@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 09:05:44 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/02/01 10:49:31 by jurodrig         ###   ########.fr       */
+/*   Created: 2025/02/14 08:02:00 by juan              #+#    #+#             */
+/*   Updated: 2025/02/25 14:43:17 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,26 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != (char)c)
-		s++;
-	if (*s == (char)c || !c)
-		return ((char *)s);
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != (char)c)
+		i++;
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
 	return (NULL);
 }
 /*
 int main ()
 {
-	const char *s = "CURSUS42";
-	int c = 'U';
-	
-	printf("%ld\n", ft_strchr (s, c) - s);
-	printf("%s\n", ft_strchr (s, c));
-	
+	const char	*str = "strchr";
+	char		c;
+
+	c = 'r';
+	printf("Caracter: '%c' en posición: %ld\n de '%s'\n", c, ft_strchr (str, c)
+		- str, str);
+	printf("Es decir, el caracter encontrado empieza en: %s\n", ft_strchr (str,
+			c));
 	return (0);
 }
 */

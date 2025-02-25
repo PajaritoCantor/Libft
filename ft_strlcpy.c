@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juan <juan@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/20 18:04:39 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/25 17:10:00 by jurodrig         ###   ########.fr       */
+/*   Created: 2025/02/21 10:21:44 by juan              #+#    #+#             */
+/*   Updated: 2025/02/25 14:43:10 by juan             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,28 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
-	size_t	i;
 
 	src_len = ft_strlen(src);
-	i = 0;
-	if (dstsize > 0)
+	if (dstsize == 0)
+		return (src_len);
+	while (*src && dstsize > 1)
 	{
-		while (src[i] && i < dstsize - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
+		*dst++ = *src++;
+		dstsize--;
 	}
+	*dst = '\0';
 	return (src_len);
 }
 /*
-#include <string.h>
-#include <stdio.h>
 int main ()
 {
-	char *str = "Papitas fritas con ketchup";
-	char dst[30];
-	size_t len;
+	char		dst[20] = "Mus";
+	const char	*src = "Holasic paco perros";
+	size_t		result;
 
-	len = ft_strlcpy(dst, str, sizeof(dst)); 
-	printf( "%zu\n", len);
+	result = ft_strlcpy(dst, src, 2);
+	printf("Resultado: %zu\n", result);
+	printf("dst: %s\n", dst);
 	return (0);
 }
 */
