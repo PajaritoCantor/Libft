@@ -6,7 +6,7 @@
 /*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 18:00:45 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/01/25 17:15:15 by jurodrig         ###   ########.fr       */
+/*   Updated: 2025/02/26 01:29:59 by jurodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,3 @@ int main ()
 }
 */
 
-La función ft_atoi convierte una cadena de caracteres que representa un número entero en su equivalente numérico:
-
-- El bucle while al inicio de la función ignora cualquier espacio en blanco o carácter de control al inicio de la cadena.
-- Si el primer carácter no es un espacio en blanco es un signo de más (+) o de menos (-), se establece el valor de sign en consecuencia y se incrementa el puntero de la cadena.
-- El siguiente bucle while recorre la cadena, convirtiendo cada dígito en un número y agregándolo al valor total. Esto se hace multiplicando el valor total actual por 10 y sumando el valor del dígito actual.
-- Antes de agregar el dígito actual al valor total, se verifica si la próxima operación causará un desbordamiento. Si es así, se devuelve el valor actual.
-- Se devuelve el valor total multiplicado por el signo para obtener el número entero correspondiente a la cadena de entrada.

@@ -6,7 +6,7 @@
 /*   By: jurodrig <jurodrig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 18:26:35 by jurodrig          #+#    #+#             */
-/*   Updated: 2024/02/04 04:11:15 by jurodrig         ###   ########.fr       */
+/*   Updated: 2025/02/26 01:28:54 by jurodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <stdint.h>
+
 
 int		ft_isalpha(int i);
 int		ft_isdigit(int i);
