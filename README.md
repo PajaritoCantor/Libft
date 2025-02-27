@@ -1,3 +1,5 @@
+🚧En desarrollo👷
+
 # 👨‍💻 LIBFT 
 
 #### Os comparto mi librería en C modificada y optimizada.<br><br>He dedicado tiempo a escribiros apuntes sobre cada función para que podais abordarlas vosotros mismos.<br><br>Son anotaciones desde la experiencia de alguien que suele hacer muchos cuestionamientos a cada línea de código y al por qué de las cosas. 
